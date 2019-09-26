@@ -4,81 +4,65 @@ Jay Kim
 ## Task:
 Aim: To identify classifier models to predict whether an individual is or is not officially in poverty
 (according to NYC government terms).
-● Citywide poverty rate fell to 19% in 2017 from 20.6% in 2014...but
-● 839,705 city students (74% of total student population) qualify for free or reduced-priced lunches, a common poverty marker and the highest percentage in over five years.
-● One reason: new classification practices that have improved the ability to identify low-income kids.
-● One of a growing class of city-wide datasets (via NYC OpenData)
-Film ideas for a prospective movie studio, given:
-* Industry Landscape
-* SWOT Analysis
-* Current Trends
-* Findings (Graphs & Tables)
+* Citywide poverty rate fell to 19% in 2017 from 20.6% in 2014...but
+* 839,705 city students (74% of total student population) qualify for free or reduced-priced lunches, a common poverty marker and the highest percentage in over five years.
+* One reason: new classification practices that have improved the ability to identify low-income kids.
+* One of a growing class of city-wide datasets (via NYC OpenData)
 
-## Applications Utilized:
-Data Science Tools Used:
-* Amazon Web Services (RDS, DB instances)
-* Jupyter Notebook (Python)
-* MySQL
-* Beautiful Soup
-* Matplotlib
+## Data Sources
+* NYC Open Data (main file: "NYCgov_PovertyStatus_2017")
+* ____
+* ____
 
-Websites Used:
-* Box Office Mojo (webscraping): $ metrics
-* IMDb (API): user ratings
-* The Numbers (webscraping): bankability of top industry figures
+## Data Science Applications Used
+__Classifier Models:__
+* Logistic Classifier
+* KNN
+* Decision Tree
+* Random Forest
+* Adaboost & XGBoost
 
-## How a movie's success is measured
-A film's success is dependant on multiple factors:
-* User Reviews
-* Box Office Performance
-* Returns relative to the budget
- 
-The following information presents discoveries showing which factor is most important when determining a film's profitability.
-## Genres examined:
-* 3D
-* Animation
-* Gay/Lesbian
-* Horror
-* Rom-Com
+__Additional Tools:__
+* SMOTE
+* PCA
+* GridSearchCV
 
-These genres were found from BoxOfficeMojo sorted by quantity of movies.  The other two genres ahead of those selected were Foreign Language and Documentary, both of which were eliminated based on lack of overall mainstream success.
+## Challenges
+Source Data:
+* Inconsistent Data
+* Multi-Indexed variables
+Models:
+* Under- / Over-Fit
+* Confounding Variables, Multicollinearity
+* Class Imbalance
 
-## MySQL Database schema with movies collected
+## Modeling Overview
 ![mainsqltable](Images/MainDB_Table_Head.png "Main SQL Table")
-Collected 715 movies from BoxOfficeMojo, the beginning of which is displayed as a summary table above.  These movies' release dates spanned the years from 1980 (which was as far back as BoxOfficeMojo would allow) to the present.  The selected attributes from each film were scanned and uploaded using Python's MySQLconnector and a sequence of query commands.  The data was hosted on Amazon Web Services: Relational Database Servers, DB instances.
-
 ![the-numbers-webscraping-slide](Images/The-Numbers-Webscrape.png "Webscraping Example From Presentation")
 
+__Baseline Data = 68,094 total samples__
+* _12,109 (~17%) qualified for Poverty Status_
+__Calculating Poverty Status: Income vs. Poverty Threshold__
+* _If Income < Poverty Threshold, individual qualifies for Poverty Status_
+* _If Income > Poverty Threshold, individual does *not* qualify for Poverty Status_
+* _Sample scales up to entire NYC Population (multiplied by specific weights for individual or household)_
 
-## Data Collected and Visualized
-The data gathered from both the-numbers.com and boxofficemojo.com were scraped using Python's Beautifulsoup library to parse through each website's HTML code.  An API key from OMDb, a third-party, through Python was used to gather the required user reviews from IMDb.com. The data was then visualized into various graphs and charts using Python's Matplotlib library.
-
-## Correlation between profit and ratings
+## Final Metrics
 ![scatter](Images/profit_ratings_relation.png "Profit And Ratings Scatter Plot")
 
-A positive correlation is expected with scatter plot markers increasing from the left to right, forming a gradual slope upwards. Based on the data, however, the results appears to be at a nearly-flat slope (above).  This demonstrates little to no significant correlation between user reviews and box office revenue.
-Adding the bankability metrics, however, adds further color to the relationship (below).  The Gay/Lesbian Genre nearly completely lacks presence in th top 50 star index, while the 3D category notably dominates, especially for big-budget blockbusters (like Avengers: Endgame in the upper-right).
-![scatter](Images/ScatterPlot-Cross-Relationships.png "Scatter Plot With Bankability Marker Sizes")
+Currently, Inconclusive Results
+* Cross Validation metrics were okay, but not much better than Dummy Classifier
+* To be continued:
+_(even) deeper dive into data_
+_Many more iterations of tuning hyper-parameters_
 
-## Average budget and profit by genre
-![bar](Images/budget_profit_by_genre.png "Average Budget And Profit Bars")
 
-For the genres of Rom-Com, Horror, and Gay/Lesbian the average profit is almost half of the average budget used. The average budget for this genres is relatively much lower than 3D and Animation.
+## Conclusions and Recommendations: Much Room for Improvement
+__For me: more to come!__
+_- Maximize Precision or Recall?_
+   _(which is more tolerable- FP or FN?)_
 
-## Average Multiplier vs. Average Profit
-
-The average multiplier is simply calculated as the box office returns divided by the budget, showing how much return is expected on average given a movie's genre.  Even though the average profit return is nearly half of the average budget for Rom-Com, Horror, and Gay/Lesbian films; the profit gross is still not as high as the 3D or Animation genres.
-
-![multivsprofit](Images/MultiVsProfit.png "Average Multiplier VS Average Profit")
-
-This bar chart displays the multiplier vs the return and it can be observed that the Gay/Lesbian and Horror films have the best multiplier.  However, their respective profit does not return as much as the 3D and Animation genres.
-
-## Histogram Distribution of Profitable Films across each Genre
-
-![hist](Images/ChancesOfProfit.png "Histogram Distribution Of Films")
-
-When it comes to the overall probability to making profitable movies, the likelihood a film studio can actually make a profit is shown above.  Most films across the genres are more likely to either break-even or lose money.  Only a few movies are able to make a decent profit in the film industry.
-
-## Recommendations and Suggestions
-
-Based on the visualized data, the recommended route for a brand new movie studio is to _focus primarily_ on __Gay/Lesbian themed movies or Horror films__.  Both of these genres provide a decent amount of profit without the large budget commitment a 3D or Animation movie requires.  Although, if a new film studio wanted to _make a large profit_, _break the box office_, and has no issue with investing a large amount of money in a film, it is recommended to focus on a __3D or Animation movie__ involving a __well-known, reputable industry professional__.  _At the very least_, involve a __famous actor/actress, or producer/director__ in a film in order to _increase the chances of making a profit_.  However, based on the distribution of profitable movies across the genres, it is suggested to not enter the film industry because _there is a larger chance of not making a profit at all_.
+__For NYC’s system:__
+_- Slim down + Optimize bureaucracy-laden data structure
+- Potential as Keystone / Connector Data
+- Predictive Power, Systemic “Nudges”_
