@@ -41,6 +41,8 @@ Models:
 ![the-numbers-webscraping-slide](Images/The-Numbers-Webscrape.png "Webscraping Example From Presentation")
 
 __Baseline Data = 68,094 total samples__
+<img src="Images/Pov1.png" width="300" height="200">
+
 * _12,109 (~17%) qualified for Poverty Status_
 
 __Calculating Poverty Status: Income vs. Poverty Threshold__
