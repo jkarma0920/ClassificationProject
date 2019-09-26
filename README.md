@@ -27,8 +27,7 @@ __Additional Tools:__
 * PCA
 * GridSearchCV
 
-## Challenges
-Source Data:
+## Source Data:
 * Inconsistent Data
 * Multi-Indexed variables
 Models:
@@ -36,12 +35,14 @@ Models:
 * Confounding Variables, Multicollinearity
 * Class Imbalance
 
+
 ## Modeling Overview
 ![mainsqltable](Images/MainDB_Table_Head.png "Main SQL Table")
 ![the-numbers-webscraping-slide](Images/The-Numbers-Webscrape.png "Webscraping Example From Presentation")
 
 __Baseline Data = 68,094 total samples__
-<img src="Images/Pov1.png" width="300" height="200">
+<img src="Images/Pov1.png" width="700" height="400">
+<img src="Images/PovZZ.png" width="600" height="600">
 
 * _12,109 (~17%) qualified for Poverty Status_
 
@@ -50,8 +51,26 @@ __Calculating Poverty Status: Income vs. Poverty Threshold__
 * _If Income > Poverty Threshold, individual does *not* qualify for Poverty Status_
 * _Sample scales up to entire NYC Population (multiplied by specific weights for individual or household)_
 
+
+<img src="Images/Pov3.png" width="1000" height="700">
+## Challenges
+
+1
+2
+3
+4
+<img src="Images/Pov4.png" width="1000" height="800">
+<img src="Images/Pov5.png" width="400" height="250">
+<img src="Images/Pov6.png" width="400" height="250">
+
+
+<img src="Images/Pov7.png" width="500" height="250">
+<img src="Images/Pov8.png" width="500" height="250">
+<img src="Images/Pov9.png" width="500" height="250">
+<img src="Images/PovA.png" width="500" height="250">
+
 ## Final Metrics
-![scatter](Images/profit_ratings_relation.png "Profit And Ratings Scatter Plot")
+![issues](Images/profit_ratings_relation.png "Profit And Ratings Scatter Plot")
 
 Currently, Inconclusive Results
 * Cross Validation metrics were okay, but not much better than Dummy Classifier
