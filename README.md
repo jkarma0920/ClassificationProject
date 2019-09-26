@@ -1,10 +1,10 @@
-# Classification Modeling: NYC Povery Status
+# Classification Modeling: NYC Poverty Status
 Jay Kim
 
 ## Task:
 Aim: To identify classifier models to predict whether an individual is or is not officially in poverty
 (according to NYC government terms).
-* Citywide poverty rate fell to 19% in 2017 from 20.6% in 2014...but
+* Citywide poverty rate fell to 19% in 2017 from 20.6% in 2014...(but)
 * 839,705 city students (74% of total student population) qualify for free or reduced-priced lunches, a common poverty marker and the highest percentage in over five years.
 * One reason: new classification practices that have improved the ability to identify low-income kids.
 * One of a growing class of city-wide datasets (via NYC OpenData)
