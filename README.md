@@ -42,6 +42,7 @@ Models:
 
 __Baseline Data = 68,094 total samples__
 * _12,109 (~17%) qualified for Poverty Status_
+
 __Calculating Poverty Status: Income vs. Poverty Threshold__
 * _If Income < Poverty Threshold, individual qualifies for Poverty Status_
 * _If Income > Poverty Threshold, individual does *not* qualify for Poverty Status_
