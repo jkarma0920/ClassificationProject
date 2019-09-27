@@ -28,21 +28,13 @@ __Additional Tools:__
 * GridSearchCV
 
 ## Source Data:
-* Inconsistent Data
-* Multi-Indexed variables
-Models:
-* Under- / Over-Fit
-* Confounding Variables, Multicollinearity
-* Class Imbalance
-
-
-## Modeling Overview
-
-
+* NYC Open Data ("NYCgov_PovertyStatus_2017")
+* (will join with external tables- demographic, income, time data)
+* ---
 
 __Baseline Data = 68,094 total samples__
 <img src="Images/Pov1.png" width="600" height="350">
-<img src="Images/PovZZ.png" width="800" height="700">
+<img src="Images/PovZZ.png" width="700" height="600">
 
 * _12,109 (~17%) qualified for Poverty Status_
 
@@ -53,32 +45,35 @@ __Calculating Poverty Status: Income vs. Poverty Threshold__
 
 
 <img src="Images/Pov3.png" width="1000" height="700">
-## Challenges
-
-1
-2
-3
-4
 <img src="Images/Pov4.png" width="800" height="600">
+
+## Challenges
+Data:
+* Inconsistent
+* Multi-Indexed variables
+Models:
+
+## Modeling Overview
+Logistic Regression
+* Under- / Over-Fit
+* Confounding Variables, Multicollinearity
+* Class Imbalance
+K-Nearest Neighbors (KNN)
 <img src="Images/Pov56.jpg" width="900" height="250">
-
-
+Decision Tree
 ![DT HPs](Images/Pov7thruA.png "all 4 DT hyper-parameters")
-
-
-## Final Metrics
+Feature Importances (Decision Tree vs. Random Forest)
 <img src="Images/PovAABB.png" width="800" height="500">
 
 
-![issues](Images/PovCC.png "CC Plot")
-![issues](Images/PovDD.png "DD Plot")
-
-
+## Final Metrics
 Currently, Inconclusive Results
 * Cross Validation metrics were okay, but not much better than Dummy Classifier
 * To be continued:
 _(even) deeper dive into data_
 _Many more iterations of tuning hyper-parameters_
+![issues](Images/PovCC.png "CC Plot")
+![issues](Images/PovDD.png "DD Plot")
 
 
 ## Conclusions and Recommendations: Much Room for Improvement
