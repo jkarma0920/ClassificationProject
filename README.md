@@ -37,8 +37,8 @@ Models:
 
 
 ## Modeling Overview
-![mainsqltable](Images/MainDB_Table_Head.png "Main SQL Table")
-![the-numbers-webscraping-slide](Images/The-Numbers-Webscrape.png "Webscraping Example From Presentation")
+
+
 
 __Baseline Data = 68,094 total samples__
 <img src="Images/Pov1.png" width="600" height="350">
@@ -65,11 +65,6 @@ __Calculating Poverty Status: Income vs. Poverty Threshold__
 
 ![DT HPs](Images/Pov7thruA.png "all 4 DT hyper-parameters")
 
-
-<img src="Images/Pov7.png" width="500" height="250">
-<img src="Images/Pov8.png" width="500" height="250">
-<img src="Images/Pov9.png" width="500" height="250">
-<img src="Images/PovA.png" width="500" height="250">
 
 ## Final Metrics
 <img src="Images/PovAABB.png" width="800" height="500">
