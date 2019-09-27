@@ -83,4 +83,4 @@ _- Maximize Precision or Recall?_
 __For NYC’s system:__
 _- Slim down + Optimize bureaucracy-laden data structure
 - Potential as Keystone / Connector Data
-- Predictive Power, Systemic “Nudges”_
+- Predictive Power, Systemic “Nudges”
