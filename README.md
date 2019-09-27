@@ -72,7 +72,9 @@ Currently, Inconclusive Results
 * To be continued:
 _(even) deeper dive into data_
 _Many more iterations of tuning hyper-parameters_
-![issues](Images/PovCC.png "CC Plot")
+
+<img src="Images/PovCC.png" width="1100" height="175">
+
 ![issues](Images/PovDD.png "DD Plot")
 
 ## Conclusions and Recommendations: Much Room for Improvement
