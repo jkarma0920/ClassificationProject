@@ -42,7 +42,7 @@ __Calculating Poverty Status: Income vs. Poverty Threshold__
 * _Sample scales up to entire NYC Population (multiplied by specific weights for individual or household)_
 
 
-<img src="Images/Pov3.png" width="1000" height="700">
+<img src="Images/Pov3.png" width="800" height="600">
 <img src="Images/Pov4.png" width="800" height="600">
 
 ## Challenges
