@@ -9,32 +9,30 @@ Aim: To identify classifier models to predict whether an individual is or is not
 * One reason: new classification practices that have improved the ability to identify low-income kids.
 * One of a growing class of city-wide datasets (via NYC OpenData)
 
-## Data Sources
-* NYC Open Data (main file: "NYCgov_PovertyStatus_2017")
-* ____
-* ____
+## Data Sources & Data Science Tools
+__Sources__
+* NYC Open Data ("NYCgov_PovertyStatus_2017")
+* (will join with external tables- demographic, income, time data)
+* ---
 
-## Data Science Applications Used
-__Classifier Models:__
+__Classifier Models__
 * Logistic Classifier
 * KNN
 * Decision Tree
 * Random Forest
 * Adaboost & XGBoost
 
-__Additional Tools:__
+__Additional Tools__
 * SMOTE
 * PCA
 * GridSearchCV
 
-## Source Data:
-* NYC Open Data ("NYCgov_PovertyStatus_2017")
-* (will join with external tables- demographic, income, time data)
-* ---
 
 __Baseline Data = 68,094 total samples__
+<p align='center'>
 <img src="Images/Pov1.png" width="600" height="350">
 <img src="Images/PovZZ.png" width="700" height="600">
+</p>
 
 * _12,109 (~17%) qualified for Poverty Status_
 
@@ -60,10 +58,12 @@ Logistic Regression
 * Class Imbalance
 K-Nearest Neighbors (KNN)
 <img src="Images/Pov56.jpg" width="900" height="250">
+
 Decision Tree
-![DT HPs](Images/Pov7thruA.png "all 4 DT hyper-parameters")
+<img src="Images/Pov7thruA.png" width="900" height="600">
+
 Feature Importances (Decision Tree vs. Random Forest)
-<img src="Images/PovAABB.png" width="800" height="500">
+<img src="Images/PovAABB.png" width="800" height="400">
 
 
 ## Final Metrics
@@ -74,7 +74,6 @@ _(even) deeper dive into data_
 _Many more iterations of tuning hyper-parameters_
 ![issues](Images/PovCC.png "CC Plot")
 ![issues](Images/PovDD.png "DD Plot")
-
 
 ## Conclusions and Recommendations: Much Room for Improvement
 __For me: more to come!__
