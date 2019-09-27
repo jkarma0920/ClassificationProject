@@ -41,8 +41,8 @@ Models:
 ![the-numbers-webscraping-slide](Images/The-Numbers-Webscrape.png "Webscraping Example From Presentation")
 
 __Baseline Data = 68,094 total samples__
-<img src="Images/Pov1.png" width="700" height="400">
-<img src="Images/PovZZ.png" width="600" height="600">
+<img src="Images/Pov1.png" width="600" height="350">
+<img src="Images/PovZZ.png" width="800" height="700">
 
 * _12,109 (~17%) qualified for Poverty Status_
 
@@ -59,9 +59,11 @@ __Calculating Poverty Status: Income vs. Poverty Threshold__
 2
 3
 4
-<img src="Images/Pov4.png" width="1000" height="800">
-<img src="Images/Pov5.png" width="400" height="250">
-<img src="Images/Pov6.png" width="400" height="250">
+<img src="Images/Pov4.png" width="800" height="600">
+<img src="Images/Pov56.jpg" width="900" height="250">
+
+
+![DT HPs](Images/Pov7thruA.png "all 4 DT hyper-parameters")
 
 
 <img src="Images/Pov7.png" width="500" height="250">
@@ -70,7 +72,12 @@ __Calculating Poverty Status: Income vs. Poverty Threshold__
 <img src="Images/PovA.png" width="500" height="250">
 
 ## Final Metrics
-![issues](Images/profit_ratings_relation.png "Profit And Ratings Scatter Plot")
+<img src="Images/PovAABB.png" width="800" height="500">
+
+
+![issues](Images/PovCC.png "CC Plot")
+![issues](Images/PovDD.png "DD Plot")
+
 
 Currently, Inconclusive Results
 * Cross Validation metrics were okay, but not much better than Dummy Classifier
