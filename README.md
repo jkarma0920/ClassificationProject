@@ -12,8 +12,7 @@ Aim: To identify classifier models to predict whether an individual is or is not
 ## Data Sources & Data Science Tools
 __Sources__
 * NYC Open Data ("NYCgov_PovertyStatus_2017")
-* (will join with external tables- demographic, income, time data)
-* ---
+* Future Development: will join additional external tables- demographic, income, time data
 
 __Classifier Models__
 * Logistic Classifier
